@@ -22,6 +22,7 @@ MISC_EXCLUDE=(
     --exclude='.Trash-*'
     --exclude='build/'
     --exclude='dist/'
+    --exclude='.git/'
 )
 
 EXCLUDE=(
@@ -33,7 +34,7 @@ EXCLUDE=(
 )
 
 rsync \
-    -avz \
+    -avvvz \
     --compress-level=9 \
     --delete \
     --delete-excluded \
@@ -42,3 +43,14 @@ rsync \
     ${EXCLUDE[@]} \
     ~/src/ \
     ~/nas/projects/
+
+rsync \
+    -avvvz \
+    --compress-level=9 \
+    --delete \
+    --delete-excluded \
+    --no-links \
+    --filter='P .Trash-10*' \
+    ${EXCLUDE[@]} \
+    ~/Calibre\ Library/ \
+    ~/nas/books/Calibre\ Library/
