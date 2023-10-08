@@ -26,11 +26,11 @@ MISC_EXCLUDE=(
 )
 
 EXCLUDE=(
-    ${OS_EXCLUDE[@]}
-    ${PYTHON_EXCLUDE[@]}
-    ${DOTNET_EXCLUDE[@]}
-    ${NODE_EXCLUDE[@]}
-    ${MISC_EXCLUDE[@]}
+    "${OS_EXCLUDE[@]}"
+    "${PYTHON_EXCLUDE[@]}"
+    "${DOTNET_EXCLUDE[@]}"
+    "${NODE_EXCLUDE[@]}"
+    "${MISC_EXCLUDE[@]}"
 )
 
 rsync \
@@ -40,7 +40,7 @@ rsync \
     --delete-excluded \
     --no-links \
     --filter='P .Trash-10*' \
-    ${EXCLUDE[@]} \
+    "${EXCLUDE[@]}" \
     ~/src/ \
     ~/nas/projects/
 
@@ -51,6 +51,6 @@ rsync \
     --delete-excluded \
     --no-links \
     --filter='P .Trash-10*' \
-    ${EXCLUDE[@]} \
+    "${EXCLUDE[@]}" \
     ~/Calibre\ Library/ \
     ~/nas/books/Calibre\ Library/

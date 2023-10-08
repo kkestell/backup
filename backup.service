@@ -3,5 +3,5 @@ Description=Backup
 
 [Service]
 Type=oneshot
-ExecStart=%h/src/backup/backup.sh
-WorkingDirectory=%h/src/backup
+ExecStart=%h/.local/bin/backup.sh
+WorkingDirectory=%h/.local/bin
