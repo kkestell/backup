@@ -1,0 +1,24 @@
+{
+    "jobs": [
+        {
+            "input_paths": [
+                "/home/jdoe/.ssh",
+                "/home/jdoe/.bashrc"
+            ],
+            "output_directory": "/home/jdoe/nas/backup"
+        },
+        {
+            "input_paths": [
+                "/home/jdoe/src"
+            ],
+            "output_directory": "/home/jdoe/nas/backup",
+            "excludes": [
+                ".DS_Store",
+                "*.pyc",
+                "bin/",
+                "obj/",
+                ".git/"
+            ]
+        }
+    ]
+}
